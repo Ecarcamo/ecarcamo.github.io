@@ -1,34 +1,34 @@
 
-// function navSlide()  {
-// 	const burger = document.querySelector('.burger');
-// 	const ul = document.querySelector('.ul');
-// 	const li = document.querySelectorAll('.ul li');
+ const navSlide = () => {
+ 	const burger = document.querySelector('.burger');
+	const ul = document.querySelector('.ul');
+	const a = document.querySelectorAll('.ul a');
 
-// 	burger.addEventListener('click', () => {
-// 		ul.classList.toggle('.nav-transform');
+	burger.addEventListener('click', () => {
+		ul.classList.toggle('ul-transform');
 
 
-// 		li.forEach((link, index)=> {
-// 			if(link.style.animation) {
-// 				link.style.animation = ''
-// 			}
-// 			else {
-// 				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.55}s`
-// 			}
-// 		});
+		a.forEach((link, index) => {
+			if(link.style.animation) {
+				link.style.animation = '';
+			}
+  			else {
+ 				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.55}s`
+ 			}
+ 		});
 
-// 		burger.classList.toggle('.toggle')
-// 		});
-// 		};
+ 		burger.classList.toggle('.toggle')
+ 	});
+};
 
-// navSlide();
+ navSlide();
 
 
 window.onscroll = function(){
 	const nav = document.querySelector('.nav');
 	var tamanioVentana = window.scrollY;
 	console.log(tamanioVentana);
-	if (tamanioVentana >= 960){
+	if (tamanioVentana >= 50){
 		nav.classList.add('nav-active');
 	} else {
 		nav.classList.remove('nav-active');

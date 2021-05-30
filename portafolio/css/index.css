@@ -79,6 +79,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--colorClaro);
+    margin: 5px;
+}
+
 
 /*---------------------------------------------------*/
 /*---------------------INICIO------------------------*/
@@ -340,7 +347,7 @@ img {
 
 
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1024px) {
 
     /*---------------------------------------------------*/
     /*---------------------HEADER------------------------*/
@@ -450,3 +457,102 @@ img {
     }
 }
 
+@media screen and (max-width: 1400px) and (min-width: 1024px){
+    .nav .ul {
+        width: 50%;
+    }
+
+    .contenedor-acerca .acerca-de-mi {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contenedor-acerca .hobbies {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .ul {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+
+    .ul a {
+        opacity: 0;
+    }
+
+    .nav .ul a {
+        letter-spacing: 1px;
+        color: var(--colorClaro);
+        text-decoration: none;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: var(--weightSubtitulos);
+        font-size: 25px;
+        color: var(--colorClaro);
+        list-style: none;
+        margin: 30px;
+    }
+
+    .nav .ul a li {
+        transition: .5s ease all;
+    }
+
+    .nav .ul a li:hover {
+        color: var(--colorHover);
+    }
+    
+    .burger {
+        display: block;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .ul-transform {
+        transform: translateX(0%);
+    }
+
+     
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .linea1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .linea2 {
+    opacity: 0;
+}
+
+.toggle .linea3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+
+}
