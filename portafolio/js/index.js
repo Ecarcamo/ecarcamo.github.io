@@ -1,3 +1,29 @@
+
+// function navSlide()  {
+// 	const burger = document.querySelector('.burger');
+// 	const ul = document.querySelector('.ul');
+// 	const li = document.querySelectorAll('.ul li');
+
+// 	burger.addEventListener('click', () => {
+// 		ul.classList.toggle('.nav-transform');
+
+
+// 		li.forEach((link, index)=> {
+// 			if(link.style.animation) {
+// 				link.style.animation = ''
+// 			}
+// 			else {
+// 				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.55}s`
+// 			}
+// 		});
+
+// 		burger.classList.toggle('.toggle')
+// 		});
+// 		};
+
+// navSlide();
+
+
 window.onscroll = function(){
 	const nav = document.querySelector('.nav');
 	var tamanioVentana = window.scrollY;
@@ -9,9 +35,10 @@ window.onscroll = function(){
 	}
 }
 
+
+
 const escrito = new Typed('.escrito', {
 	strings: [
-		'<i class="profesion">Desarrollador Web</i>', 
 		'<i class="profesion">Alumno</i>',
 		'<i class="profesion">Programador</i>',
 		'<i class="profesion">Violonchelista</i>'
@@ -29,27 +56,3 @@ const escrito = new Typed('.escrito', {
 });
 
 
-// const navSlide = () => {
-// 	const burger = document.querySelector('.burger');
-// 	const menu = document.querySelector('.menu');
-// 	const li = document.querySelectorAll('.menu li');
-	
-// 	burger.addEventListener('click', () => {
-
-// 		menu.classList.toggle('nav-active');
-
-		
-// 		li.forEach((link, index)=> {
-// 			if(link.style.animation) {
-// 				link.style.animation = ''
-// 			}
-// 			else {
-// 				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.55}s`
-// 			}
-// 		});
-
-// 		burger.classList.toggle('toggle')
-// 	});
-// };
-
-// navSlide();
